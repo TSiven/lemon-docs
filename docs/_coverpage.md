@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](_media/icon.png ':size=10px')
+![logo](_media/icon.png ':size=20%')
 
 
 # lemon-framework <small>1.0.0.RELEASE</small>

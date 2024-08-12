@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## [1.1.3.RELEASE] 2024/06/21
+## [1.0.0.RELEASE] 2024/06/21
 ### 更新组件
 - job
     `[新特性]`xxl-job执行日志扩展日志追踪traceId打印

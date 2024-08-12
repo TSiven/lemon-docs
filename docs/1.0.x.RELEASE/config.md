@@ -1,7 +1,7 @@
 ```yaml
 # Config
 lemon:
-  # 日志配置 `1.0.9.RELEASE` 以上版本支持
+  # 日志配置
   logging:
     # 总开关, 为false将关闭日志功能, 默认开启
     enable: true
@@ -46,8 +46,8 @@ lemon:
     serialization:
       # 是否包含null值属性。不包含(NON_NULL)，包含（always）
       include: non_null
-      domain: https://static.bivbris.com # 动态替换域名资源 `1.1.3.RELEASE` 以上版本支持
-      enable-sensitive: true # 是否开启脱敏 `1.1.3.RELEASE` 以上版本支持
+      domain: https://static.bivbris.com # 动态替换域名资源 `1.0.0.RELEASE` 以上版本支持
+      enable-sensitive: true # 是否开启脱敏 `1.0.0.RELEASE` 以上版本支持
     # 日期格式化配置
     date-format:
       serializer-to-user-time-zone: true # 序列化：系统时区TO 用户时区

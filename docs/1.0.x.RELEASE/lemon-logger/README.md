@@ -16,7 +16,7 @@
 <parent>
     <groupId>com.lemon.framework</groupId>
     <artifactId>lemon-dependencies</artifactId>
-    <version>1.1.3.RELEASE</version>
+    <version>1.0.0.RELEASE</version>
 </parent>
 ```
 
@@ -38,7 +38,7 @@
 ```yaml
 # Config
 lemon:
-  # 日志配置 `1.0.9.RELEASE` 以上版本支持
+  # 日志配置
   logging:
     # 总开关, 为false将关闭日志功能, 默认开启
     enable: true

@@ -17,7 +17,7 @@
 <parent>
     <groupId>com.lemon.framework</groupId>
     <artifactId>lemon-dependencies</artifactId>
-    <version>1.1.3.RELEASE</version>
+    <version>1.0.0.RELEASE</version>
 </parent>
 ```
 

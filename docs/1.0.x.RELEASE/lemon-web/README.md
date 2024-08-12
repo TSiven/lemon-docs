@@ -6,7 +6,7 @@
 - WEB工具包
 - 同一响应内容体
 - RequestBody扩展
-- 接口防重复提交 `1.0.9.RELEASE` 以上版本支持
+- 接口防重复提交
 
 ## 安装
 
@@ -16,7 +16,7 @@
 <parent>
     <groupId>com.lemon.framework</groupId>
 	<artifactId>lemon-dependencies</artifactId>
-    <version>1.1.3.RELEASE</version>
+    <version>1.0.0.RELEASE</version>
 </parent>
 ```
 
@@ -40,8 +40,8 @@
       serialization:
         # 是否包含null值属性。不包含(NON_NULL)，包含（always）
         include: non_null
-        domain: https://static.bivbris.com # 动态替换域名资源 `1.1.3.RELEASE` 以上版本支持
-        enable-sensitive: true # 是否开启脱敏 `1.1.3.RELEASE` 以上版本支持
+        domain: https://static.bivbris.com # 动态替换域名资源 `1.0.0.RELEASE` 以上版本支持
+        enable-sensitive: true # 是否开启脱敏 `1.0.0.RELEASE` 以上版本支持
       # 日期格式化配置
       date-format:
         serializer-to-user-time-zone: true # 序列化：系统时区TO 用户时区(默认不开启)
@@ -49,7 +49,7 @@
         user-time-zone-header: X-User-Timezone # 用户时区Header参数名
         default-user-time-zone: Asia/Shanghai # 默认用户时区
         system-time-zone: UTC # 系统时区
-      # 接口就重复请求配置 `1.0.9.RELEASE` 以上版本支持
+      # 接口就重复请求配置
       limit:
         enable: true # 开关
         timeout: 3 # 多少秒内每个用户只允许访问一次
@@ -170,7 +170,7 @@ public class ExampleVo extends BaseDataObject {
 
 #### 域名响应序列化
 
-`1.1.3.RELEASE` 以上版本支持
+`1.0.0.RELEASE` 以上版本支持
 
 由于S3域名资源有被墙的风险, 存储数据库内容会将域名存储到库中, 并非存储资源ID, 返回到前端域名失效。 该工具提供根据域名资源内容, 动态替换域名返回至前端。
 
@@ -218,7 +218,7 @@ public class CustomDomainProvider implements DomainProvider {
 ```
 
 #### 数据脱敏序列化
-> `1.1.3.RELEASE` 以上版本支持
+> `1.0.0.RELEASE` 以上版本支持
 
 实现内容脱敏展示，期望做到可灵活配置，灵活启用，并且最好内置丰富插件，支持手机号、邮箱、身份证号、住址、中文名、座机号、银行卡、自定义等多种类型的脱敏配置。
 
@@ -229,7 +229,7 @@ public class CustomDomainProvider implements DomainProvider {
     web:
       # 序列化配置
       serialization:
-        enable-sensitive: true # 是否开启脱敏 `1.1.3.RELEASE` 以上版本支持
+        enable-sensitive: true # 是否开启脱敏 `1.0.0.RELEASE` 以上版本支持
 ```
 
 
@@ -274,7 +274,7 @@ public class SensitiveEntity{
 
 
 #### 数值序列化
-> `1.1.3.RELEASE` 以上版本支持
+> `1.0.0.RELEASE` 以上版本支持
 
 实现对响应的数值类型转String，支持对小数点保留处理、以及格式化内容输出
 
@@ -467,8 +467,6 @@ com.lemon.sample.quickstart.service.CustomJsonSerializer
 > [完整代码示例](https://codeup.aliyun.com/66b98e63c3f44f74f4310473/framework/lemon-samples/-/blob/master/lemon-sample-quickstart/src/main/java/com/lemon/sample/quickstart/service/CustomJsonSerializer.java)
 
 ### 接口限流处理
-
-> `1.0.9.RELEASE` 以上版本支持
 
 对接口的限流功能的封装，主要应用场景：
 - 单位时间内防止重复提交

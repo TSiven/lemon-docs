@@ -801,47 +801,6 @@ public interface Fallback {
 
 Request持有类，作用于在任何地方获取Reuqest对象
 
-### 统一响应内容体
-
-````
-作用于Resource响应内容, 统一包装`Result.class`对象
-````
-
-#### 使用说明
-
-1. 在类或者方法上添加注解 `{@link com.lemon.framework.web.annotation.ResponseResultBody}`
-
-#### 代码示例
-
-```java
-@RestController
-@ResponseResultBody
-@RequestMapping("response_result_body")
-public class ResponseResultBodyResource {
-
-    @Autowired
-    UserService userService;
-
-    @LogAnnotation(enableRepository = true)
-    @ApiOperation("根据用户编号获取用户信息")
-    @GetMapping("/{userNo}")
-    public User getByUserNo(@PathVariable String userNo) {
-        User user = userService.getByUserNo(userNo);
-        return user;
-    }
-
-    @LogAnnotation(enableRepository = true)
-    @ApiOperation("已经返回Result不做处理")
-    @GetMapping("result/{userNo}")
-    public Result<User> getByUserNo2(@PathVariable String userNo) {
-        User user = userService.getByUserNo(userNo);
-        return Result.ok(user);
-    }
-}
-
-```
-
-
 ### RequestBody扩展
 
 #### 使用说明

@@ -3,7 +3,7 @@
 ![logo](_media/icon.png)
 
 
-# lemon-framework <small>1.1.3.RELEASE</small>
+# lemon-framework <small>1.0.0.RELEASE</small>
 
 > Spring Cloud 微服务开发平台
 
